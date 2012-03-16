@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Lists";
+}
+
+@model PerceptiveMCAPI.Types.listsResults
+           
+<h2>Lists</h2>
+
+<table>
+@{
+    foreach (var item in Model.data.ToList())
+    {
+        <tr><td><a href="/home/list/@item.id.ToString()">@item.id.ToString()</a></td><td>@item.name.ToString()</td></tr>
+    }
+}
+</table>

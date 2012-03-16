@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Settings";
+}
+@model List<KeyValuePair<string, string>>
+           
+<h2>Settings</h2>
+
+<table>
+@{
+    foreach (var item in Model)
+    {
+        <tr><td>@item.Key.ToString()</td><td>@item.Value.ToString()</td></tr>
+    }
+}
+</table>

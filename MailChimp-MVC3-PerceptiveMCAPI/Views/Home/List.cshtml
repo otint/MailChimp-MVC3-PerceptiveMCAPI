@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "List";
+}
+@model PerceptiveMCAPI.Types.listMembersResults
+           
+<h2>List</h2>
+
+@ViewBag.Output
+
+<table>
+@{
+    foreach (var item in Model.data.ToList())
+    {
+        <tr><td>@item.email.ToString()</td><td>@item.reason.ToString()</td></tr>
+    }
+}
+</table>
