@@ -1,11 +1,19 @@
 Quick start
 -----------
-Add your MailChimp API key to the Web.Config file and run the solution in Visual Studio 2010
+Add your MailChimp API key to the Web.config file (in both places) and run the solution in Visual Studio 2010
 
 ```html
+      <configSections>
+        <section name="MailChimpAPIconfig" type="PerceptiveMCAPI.MCAPISettings, PerceptiveMCAPI"/>
+      </configSections>
       <appSettings>
+        <add key="ClientValidationEnabled" value="true"/> 
+        <add key="UnobtrusiveJavaScriptEnabled" value="true"/>
         <add key="apikey" value="YOUR-MAILCHIMP-API-KEY-HERE"/>
       </appSettings>
+      <MailChimpAPIconfig>
+        <MCAPI apikey="YOUR-MAILCHIMP-API-KEY-HERE"  />
+      </MailChimpAPIconfig>
 ```
 
 
