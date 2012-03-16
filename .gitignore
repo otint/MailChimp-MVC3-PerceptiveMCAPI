@@ -17,6 +17,9 @@ Thumbs.db
 *.cache
 *.ilk
 *.log
+*.js
+Scripts*/
+Models*/
 [Dd]ebug*/
 *.lib
 *.sbr
